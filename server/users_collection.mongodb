@@ -1,0 +1,7 @@
+
+const database = 'instagram';// new database name
+const collection = 'users';// new collection name
+
+use(database);
+
+db.createCollection(collection);
