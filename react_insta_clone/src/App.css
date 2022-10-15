@@ -1,0 +1,10 @@
+nav {
+  display:grid;
+  grid-template-columns: 91%, 3%, 3%, 3%;
+}
+
+nav > img{
+  max-width: 30px;
+  max-height: 30px;
+  padding: 3px;
+}
