@@ -1,0 +1,23 @@
+// Author: Carolyn Bozin
+//
+//
+//
+
+//database to use:
+use('instagram');
+
+//drop tables:
+db.users.drop();
+
+//insert documents into "users" collection
+db.users.insertMany([
+    { 'user_id' : 1, 'first_name': 'Carolyn', 'last_name': 'Bozin', 'email': 'cbozin@zagmail.gonzaga.edu', 'age': 20},
+    { 'user_id' : 2, 'first_name': 'Evan', 'last_name': 'Shoemaker', 'email': 'eshoemaker2@zagmail.gonzaga.edu', 'age' : 21}
+]);
+
+//find one
+db.users.findOne(
+    {'user_id' : 2},
+    {}
+);
+

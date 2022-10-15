@@ -1,0 +1,25 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+
+// const database = 'instagram';
+// const collection = 'visitors';
+
+
+
+// The current database to use.
+use('instagram');
+db.visitors.drop();
+// Create a new collection.
+//db.createCollection(collection);
+
+//The prototype form to create a time-series collection:
+ db.createCollection( 'visitors',
+  {
+    timeseries: {
+      timeField: "timestamp",
+      granularity: "minutes"
+    },
+    expireAfterSeconds: 10
+  }
+) 
