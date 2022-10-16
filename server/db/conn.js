@@ -1,24 +1,25 @@
-const { MongoClient } = require("mongodb");
+
 const Db = process.env.ATLAS_URI;
-const client = new MongoClient(Db, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
+const mongoose = require('mongoose');
 
-var _db;
 
-module.exports = {
-    connectToServer: function (callback) {
-        client.connect(function (err, db){
-            if(db)
-            {
-                _db = db.db("instagram");
-                console.log("Connected to Instagram database on MongoDB");
-            }
-            return callback(err);
-        });
-    },
-    getDb: function () {
-        return _db;
-    },
-};
+const connectDB = async () => {
+    try{
+
+        mongoose.connect(Db, {
+        useNewUrlParser: true});
+        console.log("Connected to MongoDB");
+
+    }catch(err){
+        console.log("Could not connect");
+    }
+    
+
+
+
+
+}
+
+
+module.exports = connectDB;
+   
