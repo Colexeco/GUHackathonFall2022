@@ -43,24 +43,34 @@ export default function Create() {
  // This following section will display the form that takes the input from the user.
  return (
    <div>
-     <h3>Create New Record</h3>
+     <h3>Create New User</h3>
      <form onSubmit={onSubmit}>
        <div className="form-group">
-         <label htmlFor="name">Name</label>
+         <label htmlFor="first_name">first_name</label>
          <input
            type="text"
            className="form-control"
-           id="name"
+           id="first_name"
            value={form.name}
            onChange={(e) => updateForm({ name: e.target.value })}
          />
        </div>
        <div className="form-group">
-         <label htmlFor="position">Position</label>
+         <label htmlFor="last_name">last_name</label>
          <input
            type="text"
            className="form-control"
-           id="position"
+           id="last_name"
+           value={form.name}
+           onChange={(e) => updateForm({ name: e.target.value })}
+         />
+       </div>
+       <div className="form-group">
+         <label htmlFor="position">email</label>
+         <input
+           type="text"
+           className="form-control"
+           id="email"
            value={form.position}
            onChange={(e) => updateForm({ position: e.target.value })}
          />
