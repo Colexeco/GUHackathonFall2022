@@ -3,7 +3,7 @@ import React from "react";
 import {Route, Routes} from "react-router-dom";
 
 import Navbar from './components/navbar';
-import UserList from './components/UserList';
+import UserList from './components/userList';
 import Edit from './components/edit';
 import Create from './components/create';
 
